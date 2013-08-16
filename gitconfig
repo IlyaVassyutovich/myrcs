@@ -1,0 +1,12 @@
+[user]
+	name = Ilya Vassyutovich
+	email = ivasyutovich@qsoft.ru
+
+[merge]
+	tool = meld
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+[core]
+	excludesfile = ~/.gitignore_global
