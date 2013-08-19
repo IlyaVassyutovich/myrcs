@@ -13,4 +13,4 @@ alias serv_rd='launch_rdesktop serv'
 
 alias rdesktop='rdesktop -d CREAT0RS -u ivasyutovich -k ru-ru -g 1440x900'
 
-bebeep="beep -f 1000 -n -f 1500 -n -f 2000"
+alias bebeep='beep -f 1000 -n -f 1500 -n -f 2000'
