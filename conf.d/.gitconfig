@@ -1,17 +1,17 @@
 [user]
-	name = Ilya Vassyutovich
-	email = ivasyutovich@qsoft.ru
-	signingkey = 9BD96E4F
+    name = Ilya Vassyutovich
+    email = ivasyutovich@qsoft.ru
+    signingkey = 9BD96E4F
 
 [merge]
-	tool = meld
+    tool = meld
 
 [alias]
-	st = status
-	ci = commit
+    st = status
+    ci = commit
     co = checkout
     di = diff --color
     us = reset HEAD
 
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global

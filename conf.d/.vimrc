@@ -15,6 +15,8 @@ if v:progname =~? "evim"
   finish
 endif
 
+set paste
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
