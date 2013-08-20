@@ -9,6 +9,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias __sudo='sudo -i'
+
 alias serv_rd='launch_rdesktop serv'
 
 alias rdesktop='rdesktop -d CREAT0RS -u ivasyutovich -k ru-ru -g 1440x900'
