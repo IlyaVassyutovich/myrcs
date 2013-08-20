@@ -14,4 +14,8 @@ do
         mv ~/$RC ~/$RC.`date +%y%m%d`.bak
     fi
     $LN $SYML $RCDIR/$RC ~/$RC
+    echo "$RC created..."
 done
+
+echo "Done"
+exit 0
