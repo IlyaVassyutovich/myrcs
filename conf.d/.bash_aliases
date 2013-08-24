@@ -14,6 +14,8 @@ alias du='du --human-readable'
 
 alias __sudo='sudo -i'
 
+alias virsh='sudo virsh'
+
 alias serv_rd='launch_rdesktop serv'
 
 alias rdesktop='rdesktop -d CREAT0RS -u ivasyutovich -k ru-ru -g 1440x900'
