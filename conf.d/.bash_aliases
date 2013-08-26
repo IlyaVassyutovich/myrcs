@@ -8,7 +8,9 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 alias df='df --human-readable'
+alias du='du --human-readable'
 
 alias __sudo='sudo -i'
 
