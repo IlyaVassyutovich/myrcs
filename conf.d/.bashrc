@@ -63,7 +63,13 @@ esac
 #fi
 #unset color_prompt force_color_prompt
 
-export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w \[\033[01;35m\]\$ \[\033[00m\]'
+export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w'
+
+if [ -f ~/.bash_gitbranch ]; then
+    . ~/.bash_gitbranch
+fi
+
+export PS1=$PS1' \[\033[01;35m\]\$ \[\033[00m\]'
 
 # If this is an xterm set the title to user@host:dir
 #case "$TERM" in

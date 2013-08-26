@@ -1,0 +1,10 @@
+#! /bin/bash
+if [ ! -z `which git` ]; then
+    function get_branch {
+        BRANCH=`git rev-parse --symbolic-full-name --abbrev-ref HEAD 2> /dev/null`
+        if [ ! -z $BRANCH ]; then
+            echo " [$BRANCH]"
+        fi
+    }
+    export PS1=$PS1"\[\033[0;32m\]\$(get_branch)"
+fi
