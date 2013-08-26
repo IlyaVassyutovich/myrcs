@@ -12,6 +12,7 @@
     co = checkout
     di = diff --color
     us = reset HEAD
+    merge = merge --no-ff
 
 [core]
     excludesfile = ~/.gitignore_global
