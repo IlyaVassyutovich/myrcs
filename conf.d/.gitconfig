@@ -11,7 +11,7 @@
     ci = commit
     co = checkout
     di = diff --color
-    us = reset HEAD
+    unstage = reset HEAD
     merge = merge --no-ff
 
 [core]
