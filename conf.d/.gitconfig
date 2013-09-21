@@ -18,3 +18,4 @@
 
 [core]
     excludesfile = ~/.gitignore_global
+    pager = less -+$LESS -RS
