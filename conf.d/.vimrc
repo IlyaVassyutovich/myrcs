@@ -1,4 +1,3 @@
-
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -28,13 +27,19 @@ set nocompatible
 set backspace=indent,eol,start
 
 " To insert space characters whenever the tab key is pressed, set the 'expandtab' option:
-set expandtab
+set noexpandtab
 " With this option set, if you want to enter a real tab character use Ctrl-V<Tab> key sequence.
 
 " To control the number of space characters that will be inserted when the tab
 " key is pressed, set the 'tabstop' option. For example, to insert 4 spaces for a tab, use:
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
+set smarttab
+set smartindent
+
+" Copy and Paste using the System Clipboard
+map <C-c> "+y<CR>
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -49,17 +54,14 @@ set incsearch		" do incremental searching
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-"if has('mouse')
-"  set mouse=a
-"endif
+if has('mouse')
+  set mouse=a
+endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -97,8 +99,6 @@ if has("autocmd")
   augroup END
 
 else
-
-"  set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
 
