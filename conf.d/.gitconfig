@@ -1,6 +1,6 @@
 [user]
     name = Ilya Vassyutovich
-    email = ivasyutovich@qsoft.ru
+    email = MONOmah_V@mail.ru
     signingkey = 9BD96E4F
 
 [merge]
@@ -9,11 +9,17 @@
 [alias]
     st = status
     ci = commit
+    cia = commit -a
     co = checkout
     di = diff --color
     unstage = reset HEAD
     me = merge --no-ff
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [core]
     excludesfile = ~/.gitignore_global
+    pager = less -+$LESS -RSX
+    autocrlf = input
+
+[color]
+	ui = true

@@ -15,6 +15,9 @@ if v:progname =~? "evim"
   finish
 endif
 
+"set background=dark
+colors darkblue
+
 set paste
 
 " Use Vim settings, rather than Vi settings (much better!).

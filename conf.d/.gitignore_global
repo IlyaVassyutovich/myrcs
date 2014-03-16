@@ -3,3 +3,6 @@
 *.old
 *.swp
 *.orig
+*.user
+*.user.*
+*.out
