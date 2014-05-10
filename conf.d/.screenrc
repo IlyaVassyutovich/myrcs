@@ -20,12 +20,12 @@
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
 
-#startup_message off
+startup_message off
 #nethack on
 
 #defflow on # will force screen to process ^S/^Q
 deflogin on
-#autodetach off
+autodetach on
 
 # turn visual bell on
 vbell on
@@ -94,6 +94,13 @@ defnonblock 5
 caption always
 caption string "%{rk} %c %{dd} %{+b M}%n %{-b dd}%-w%{+b B.}%n* %t%{-}%+w%<"
 
+altscreen on
+
+split
+screen
+focus down
+screen
+focus up
 # ------------------------------------------------------------------------------
 # STARTUP SCREENS
 # ------------------------------------------------------------------------------
