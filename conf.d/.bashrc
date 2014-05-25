@@ -63,7 +63,7 @@ fi
 #fi
 #unset color_prompt force_color_prompt
 
-export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w'
+export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\W'
 
 if [ -f ~/.bash_gitbranch ]; then
     . ~/.bash_gitbranch
@@ -106,3 +106,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
