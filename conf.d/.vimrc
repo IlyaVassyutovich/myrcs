@@ -15,7 +15,7 @@ if v:progname =~? "evim"
 endif
 
 "set background=dark
-colors darkblue
+colors default
 
 set paste
 
@@ -110,3 +110,5 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+let c_space_errors=1
