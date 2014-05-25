@@ -1,4 +1,4 @@
-export LS_OPTIONS='--color=auto --human-readable'
+export LS_OPTIONS='--color=auto --human-readable --ignore-backups'
 alias ls='ls $LS_OPTIONS'
 alias ll='ls --format=long'
 alias la='ll --almost-all'
