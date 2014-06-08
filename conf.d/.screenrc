@@ -94,6 +94,9 @@ focus down
 screen
 focus up
 layout save main
+
+defmousetrack on
+mousetrack on
 # ------------------------------------------------------------------------------
 # STARTUP SCREENS
 # ------------------------------------------------------------------------------
