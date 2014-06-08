@@ -86,11 +86,14 @@ hardstatus alwayslastline "%-w %{+r} %n %t %{-} %+w %4`"
 
 altscreen on
 
+layout autosave on
+layout new main
 split
 screen
 focus down
 screen
 focus up
+layout save main
 # ------------------------------------------------------------------------------
 # STARTUP SCREENS
 # ------------------------------------------------------------------------------
