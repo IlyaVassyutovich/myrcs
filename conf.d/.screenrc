@@ -95,6 +95,7 @@ screen
 focus up
 layout save main
 
+# Enable selecting regions with mouse (since 4.2.0)
 defmousetrack on
 mousetrack on
 # ------------------------------------------------------------------------------
