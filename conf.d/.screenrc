@@ -82,33 +82,19 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 defnonblock 5
 
 hardstatus on
-hardstatus alwayslastline "%-w %{+r} %n %t %{-} %+w %4`"
+hardstatus alwayslastline "%-w%{+r}%n %t%{-r}%+w%-=%m/%d %c"
 
 altscreen on
 
 layout autosave on
 layout new main
-split
+split -v
 screen
-focus down
+focus right
 screen
-focus up
+focus left
 layout save main
 
 defmousetrack on
 mousetrack on
-# ------------------------------------------------------------------------------
-# STARTUP SCREENS
-# ------------------------------------------------------------------------------
-
-# Example of automatically running some programs in windows on screen startup.
-#
-#   The following will open top in the first window, an ssh session to monkey
-#   in the next window, and then open mutt and tail in windows 8 and 9
-#   respectively.
-#
-# screen top
-# screen -t monkey ssh monkey
-# screen -t mail 8 mutt
-# screen -t daemon 9 tail -f /var/log/daemon.log
 
