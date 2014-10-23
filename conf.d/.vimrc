@@ -27,7 +27,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 " To insert space characters whenever the tab key is pressed, set the 'expandtab' option:
-set noexpandtab
+set expandtab
 " With this option set, if you want to enter a real tab character use Ctrl-V<Tab> key sequence.
 
 " To control the number of space characters that will be inserted when the tab
