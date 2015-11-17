@@ -1,0 +1,4 @@
+dns-resolution: no
+port-resolution: no
+max-bandwidth: 100M
+log-scale: yes
