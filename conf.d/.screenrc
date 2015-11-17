@@ -82,18 +82,8 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 defnonblock 5
 
 hardstatus on
-hardstatus alwayslastline "%-w%{+r}%n %t%{-r}%+w%-=%m/%d %c"
-
+caption always "%-w%{+u}%n %t%{-}%+w"
 altscreen on
-
-layout autosave on
-layout new main
-split -v
-screen
-focus right
-screen
-focus left
-layout save main
 
 # Enable selecting regions with mouse (since 4.2.0)
 defmousetrack on
