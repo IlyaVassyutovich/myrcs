@@ -39,6 +39,8 @@ set smarttab
 set smartindent
 set autoindent
 
+set laststatus=2
+
 " Copy and Paste using the System Clipboard
 map <C-c> "+y<CR>
 
