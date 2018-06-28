@@ -15,6 +15,11 @@
     unstage = reset HEAD
     me = merge --no-ff
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    force-push = push --force-with-lease
+    pull-master = fetch origin master:master
+    fp = push --force-with-lease
+    pm = fetch origin master:master
+    rema = rebase master
 
 [core]
     excludesfile = ~/.gitignore_global
