@@ -15,7 +15,7 @@ if v:progname =~? "evim"
 endif
 
 "set background=dark
-colors default
+colors darkblue
 
 set paste
 
