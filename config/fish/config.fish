@@ -3,6 +3,7 @@ if not set -q abbrs_initialized
 
     abbr sfish "sudo -E -i /usr/bin/fish"
     abbr ssc "sudo systemctl"
+    abbr scr screen -D -R 
 end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
