@@ -9,3 +9,5 @@ end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
 set --export GPG_TTY (tty)
+
+set fish_greeting
