@@ -7,6 +7,7 @@ if not set -q abbrs_initialized
     abbr svirsh "sudo virsh"
     abbr svim "sudo -E vim"
     abbr megacli "sudo MegaCli64"
+    abbr siotop "sudo iotop --only --processes"
 end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
