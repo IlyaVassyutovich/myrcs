@@ -5,6 +5,7 @@ if not set -q abbrs_initialized
     abbr ssc "sudo systemctl"
     abbr scr "screen -D -R"
     abbr svirsh "sudo virsh"
+    abbr svim "sudo -E vim"
 end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
