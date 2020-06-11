@@ -1,32 +1,50 @@
+[include]
+	path = .gitconfig_user
 [user]
-    name = Ilya Vassyutovich
-    email = MONOmah_V@mail.ru
-    signingkey = 9BD96E4F
-
+	name = Ilya Vassyutovich
+	signingkey = B3986DFC895D503C395A704D39FD100DF9D03E17
 [merge]
-    tool = meld
-
-[alias]
-    st = status
-    ci = commit
-    cia = commit -a
-    co = checkout
-    di = diff --color
-    unstage = reset HEAD
-    me = merge --no-ff
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    force-push = push --force-with-lease
-    pull-master = fetch origin master:master
-    fp = push --force-with-lease
-    pm = fetch origin master:master
-    rema = rebase master
-
+	tool = kdiff3
+	conflictstyle = diff3
+[diff]
+	guitool = kdiff3
 [core]
-    excludesfile = ~/.gitignore_global
-    pager = less -+$LESS -RSX
-    autocrlf = input
-
+	editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+	excludesfile = ~/.gitignore_global
+	pager = less -+$LESS -RSX
+[alias]
+	st = status
+	ci = commit
+	cia = commit -a
+	co = checkout
+	di = diff --color
+	unstage = reset HEAD
+	me = merge --no-ff
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	force-push = push --force-with-lease
+	pull-master = fetch origin master:master
+	fp = push --force-with-lease
+	pm = fetch origin master:master
+	rema = rebase master
+	reima = rebase -i master
 [color]
 	ui = true
 [push]
 	default = simple
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+[commit]
+	gpgsign = true
+	cleanup = scissors
+[gpg]
+	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
