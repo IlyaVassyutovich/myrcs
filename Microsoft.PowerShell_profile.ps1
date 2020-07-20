@@ -2,7 +2,12 @@ New-Alias kc kubectl
 New-Alias tf "C:\bin\terraform.exe"
 New-Alias helmfile "C:\bin\helmfile.exe"
 
-$mr = $env:mr
+$_mr = $env:mr
+
+$mindbox = @{
+  root = $_mr;
+  product = Join-Path $_mr "DirectCrm";
+}
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
