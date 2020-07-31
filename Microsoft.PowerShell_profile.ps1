@@ -7,6 +7,9 @@ $_mr = $env:mr
 $mindbox = @{
   root = $_mr;
   product = Join-Path $_mr "DirectCrm";
+  frontend = Join-Path $_mr "frontend";
+  uikit = Join-Path $_mr "ui-kit";
+  messaging = Join-Path $_mr "Messaging";
 }
 
 # Chocolatey profile
