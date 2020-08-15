@@ -47,3 +47,9 @@ function Get-PodName ([string] $AppLabel, [string] $Selector)
     | Select-Object -First 1
   return $PodName
 }
+
+function Prompt {
+  $TimeString = Get-Date -Format "HH:MM:ss"
+  $CurrentLocation = $executionContext.SessionState.Path.CurrentLocation
+  return "[$TimeString] $CurrentLocation $('>' * ($nestedPromptLevel + 1)) ";
+}
