@@ -11,6 +11,7 @@ if ($_mr) {
 		frontend  = Join-Path $_mr "frontend";
 		uikit     = Join-Path $_mr "ui-kit";
 		messaging = Join-Path $_mr "Messaging";
+		wpg       = Join-Path $_mr "WebPushGate"
 	}  
 }
 
