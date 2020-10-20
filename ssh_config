@@ -1,0 +1,17 @@
+Host agamemnon a7m
+	HostName agamemnon.ivh
+	Port 22
+	User monomah
+	ForwardAgent yes
+
+Host hades
+	HostName hades.ivh
+	Port 22
+	User monomah
+	ForwardAgent yes
+
+Host thanatos t6s
+	HostName thanatos.ivh
+	Port 22
+	User monomah
+	ForwardAgent yes
