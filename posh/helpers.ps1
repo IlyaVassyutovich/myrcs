@@ -69,5 +69,5 @@ function Test-IsAdmin {
 }
 
 function New-SymbolicLink ([string] $LinkValue, [string] $TargetPath) {
-	New-Item -ItemType SymbolicLink -Verbose -Path $LinkValue -Value $TargetPath
+	New-Item -ItemType SymbolicLink -Path $LinkValue -Value $TargetPath
 }
