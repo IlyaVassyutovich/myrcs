@@ -71,3 +71,7 @@ function Test-IsAdmin {
 function New-SymbolicLink ([string] $LinkValue, [string] $TargetPath) {
 	New-Item -ItemType SymbolicLink -Path $LinkValue -Value $TargetPath
 }
+
+function Get-BasePath ([string] $Path) {
+	Split-Path -Path $Path
+}
