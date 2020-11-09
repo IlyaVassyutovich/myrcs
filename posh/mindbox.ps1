@@ -1,6 +1,7 @@
 $_mr = $env:mr
 
-if ($_mr) {
+if ($_mr)
+{
 	$mindbox = @{
 		root      = $_mr;
 		product   = Join-Path $_mr "DirectCrm";
@@ -9,5 +10,5 @@ if ($_mr) {
 		messaging = Join-Path $_mr "Messaging";
 		wpg       = Join-Path $_mr "WebPushGate";
 		ph        = Join-Path $_mr "PushHub";
-	}  
+	}
 }

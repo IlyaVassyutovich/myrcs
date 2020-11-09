@@ -1,18 +1,23 @@
-function Get-EffectiveSelector([string] $AppLabel, [string] $Selector) {
-	if (-Not [string]::IsNullOrWhiteSpace($Selector)) {
+function Get-EffectiveSelector([string] $AppLabel, [string] $Selector)
+{
+	if (-Not [string]::IsNullOrWhiteSpace($Selector))
+	{
 		$EffectiveSelector = $Selector
 	}
-	elseif (-Not [string]::IsNullOrWhiteSpace($AppLabel)) {
+	elseif (-Not [string]::IsNullOrWhiteSpace($AppLabel))
+	{
 		$EffectiveSelector = "app=$AppLabel"
 	}
-	else {
+	else
+	{
 		throw "Provide selector or app label"
 	}
   
 	return $EffectiveSelector
 }
   
-function Watch-PodLogs ([string] $AppLabel, [string] $Selector) {
+function Watch-PodLogs ([string] $AppLabel, [string] $Selector)
+{
 	kubectl logs --follow="true" --selector="$(Get-EffectiveSelector $AppLabel $Selector)" --since="60s"
 	# TODO: implement reconnection, e. g. after deployment rollout
 }

@@ -1,4 +1,5 @@
-function Prompt {
+function Prompt
+{
 	$TimeString = Get-Date -Format "HH:MM:ss"
 	$CurrentLocation = $executionContext.SessionState.Path.CurrentLocation
 	$RolePrompt = if (Test-IsAdmin) { "#" } else { "$" }

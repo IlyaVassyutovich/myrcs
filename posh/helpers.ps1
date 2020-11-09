@@ -1,4 +1,5 @@
-function Test-IsAdmin {
+function Test-IsAdmin
+{
 	<#
 		.SYNOPSIS
 		Check if PowerShell run elevated (e.g. as admin or not)
@@ -37,21 +38,27 @@ function Test-IsAdmin {
 	[OutputType([bool])]
 	param ()
 	  
-	process {
-		if ($PSVersionTable.PSEdition -ne "Core") {
+	process
+	{
+		if ($PSVersionTable.PSEdition -ne "Core")
+		{
 			Write-Warning "Only PoSh-Core is supported"
 			return
 		}
   
-		if ($PSVersionTable.Platform -eq "Unix") {
-			if ((id -u) -eq 0) {
+		if ($PSVersionTable.Platform -eq "Unix")
+		{
+			if ((id -u) -eq 0)
+			{
 				return $true
 			}
-			else {
+			else
+			{
 				return $false
 			}
 		}
-		if ($PSVersionTable.Platform -eq "Win32NT") {
+		if ($PSVersionTable.Platform -eq "Win32NT")
+		{
 			# For PowerShell Core on Windows the same approach as with the Desktop work just fine
 			# This is for future improvements :-)
 			$CurrentIdentity = [Security.Principal.WindowsIdentity]::GetCurrent()
@@ -59,7 +66,8 @@ function Test-IsAdmin {
 			$AdministratorRole = [Security.Principal.WindowsBuiltInRole] "Administrator"
 			return $CurrentPrincipal.IsInRole($AdministratorRole)
 		}
-		else {
+		else
+		{
 			# Unable to figure it out!
 			Write-Warning -Message "Unknown PowerShell platform `"$($PSVersionTable.Platform)`""
   
@@ -68,10 +76,12 @@ function Test-IsAdmin {
 	}
 }
 
-function New-SymbolicLink ([string] $LinkValue, [string] $TargetPath) {
+function New-SymbolicLink ([string] $LinkValue, [string] $TargetPath)
+{
 	New-Item -ItemType SymbolicLink -Path $LinkValue -Value $TargetPath
 }
 
-function Get-BasePath ([string] $Path) {
+function Get-BasePath ([string] $Path)
+{
 	Split-Path -Path $Path
 }
