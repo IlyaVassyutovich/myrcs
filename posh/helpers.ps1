@@ -109,3 +109,4 @@ function New-PullRequest()
 
 	Start-Process $NewPullRequestUri
 }
+New-Alias npr "New-PullRequest"
