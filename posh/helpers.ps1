@@ -85,3 +85,9 @@ function Get-BasePath ([string] $Path)
 {
 	Split-Path -Path $Path
 }
+
+# MVP
+function Open-TotalCommander ()
+{
+	totalcmd /T /L=(Get-Location)
+}
