@@ -1,15 +1,25 @@
-function New-PullRequest() {
+function Get-GitHubRepositoryUri {
 	$GitStatus = Get-GitStatus -Force
 	if ($null -EQ $GitStatus) {
 		throw "Not in git repo."
 	}
 
-	$GitHubSettingsFilePath = "./.git/github.json"
+	$GitHubSettingsFilePath = Join-Path $GitStatus.GitDir "github.json"
 	if (-not (Test-Path $GitHubSettingsFilePath -PathType Leaf)) {
-		throw "GitHub settings not found."
+		throw "GitHub settings not found at `"$GitHubSettingsFilePath`"."
 	}
 
 	$RepositoryUri = Get-Content $GitHubSettingsFilePath | ConvertFrom-Json | Select-Object -ExpandProperty repositoryUri
+	if ($null -eq $RepositoryUri) {
+		throw "Unable to get repository uri from settings."
+	}
+
+	return $RepositoryUri
+}
+
+function New-PullRequest() {
+	$RepositoryUri = Get-GitHubRepositoryUri
+	
 	$NewPullRequestUri = "$($RepositoryUri)/compare/$($GitStatus.Branch)?expand=1"
 
 	Start-Process $NewPullRequestUri
@@ -17,17 +27,7 @@ function New-PullRequest() {
 New-Alias npr "New-PullRequest"
 
 function Open-GitHubRepository() {
-	$GitStatus = Get-GitStatus -Force
-	if ($null -EQ $GitStatus) {
-		throw "Not in git repo."
-	}
-
-	$GitHubSettingsFilePath = "./.git/github.json"
-	if (-not (Test-Path $GitHubSettingsFilePath -PathType Leaf)) {
-		throw "GitHub settings not found."
-	}
-
-	$RepositoryUri = Get-Content $GitHubSettingsFilePath | ConvertFrom-Json | Select-Object -ExpandProperty repositoryUri
+	$RepositoryUri = Get-GitHubRepositoryUri
 
 	Start-Process $RepositoryUri
 }
