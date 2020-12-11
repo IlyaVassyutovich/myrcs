@@ -1,4 +1,5 @@
 . (Join-Path $PSScriptRoot helpers/github.ps1)
+. (Join-Path $PSScriptRoot helpers/git.ps1)
 . (Join-Path $PSScriptRoot helpers/k8s.ps1)
 
 function Test-IsAdmin
