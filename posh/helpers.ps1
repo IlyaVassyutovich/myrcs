@@ -95,3 +95,12 @@ function Open-TotalCommander ()
 {
 	totalcmd /T /L=(Get-Location)
 }
+
+function Open-RemoteDesktopSession ([string] $Computer) {
+	$FullScreenSwitch = "/f"
+	$ComputerSelectionSwitch = "/v"
+	& C:\Windows\system32\mstsc.exe `
+		$FullScreenSwitch `
+		$ComputerSelectionSwitch $Computer
+}
+New-Alias "rdp" Open-RemoteDesktopSession
