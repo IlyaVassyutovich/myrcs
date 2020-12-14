@@ -12,3 +12,6 @@ if ($_mr)
 		ph        = Join-Path $_mr "PushHub";
 	}
 }
+
+Set-Location (Join-Path $ENV:mono "Documents")
+}
