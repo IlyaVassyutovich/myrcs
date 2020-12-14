@@ -104,3 +104,28 @@ function Open-RemoteDesktopSession ([string] $Computer) {
 		$ComputerSelectionSwitch $Computer
 }
 New-Alias "rdp" Open-RemoteDesktopSession
+
+function Invoke-LinqPadScript {
+
+	param (
+		[string]
+		[Parameter(Mandatory = $true, Position = 0)]
+		$ScriptName,
+
+		[string[]]
+		[Parameter(ValueFromRemainingArguments, Position = 1)]
+		$Rest
+	)
+
+	if (-Not (Test-Path $ScriptName)) {
+		throw "No script at `"$ScriptName`""
+	}
+
+	$LPRunBinary = "C:\Program Files\LINQPad6\LPRun6.exe"
+	if (-Not (Test-Path $LPRunBinary)) {
+		throw "LPRun not found at `"$LPRunBinary`""
+	}
+
+	& $LPRunBinary $ScriptName $Rest
+}
+New-Alias "lprun" Invoke-LinqPadScript
