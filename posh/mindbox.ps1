@@ -13,7 +13,14 @@ if ($_mr)
 	}
 }
 
-Set-Location (Join-Path $ENV:mono "Documents")
+Write-Debug "Checking IDE-flag"
+$IsRunningInIde = ${ENV:mindbox/isIntDevEnv}
+Write-Debug "Mindbox Work station flag is $IsRunningInIde"
+if ($IsRunningInIde -ne $True) {
+	Write-Debug "Settings startup location"
+	Set-Location (Join-Path $ENV:mono "Documents")
+}
+
 
 function Get-ProjectInfo ([string] $ProjectSystemName) {
 	$FancyProjectInfoScript = "D:\vasutovich\Documents\LINQPad Queries\Mindbox Services\Nexus\FancyProjectInfo.linq"
