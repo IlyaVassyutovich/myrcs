@@ -1,3 +1,5 @@
+$DebugPreference = "SilentlyContinue"
+
 $LastExitCodeBackup = $LASTEXITCODE
 
 Write-Debug "Checking Mindbox work station flag"
