@@ -1,3 +1,5 @@
+$LastExitCodeBackup = $LASTEXITCODE
+
 Write-Debug "Checking Mindbox work station flag"
 $IsMindboxWorkStation = ${ENV:mindbox/isMindboxWorkStation}
 Write-Debug "Mindbox Work station flag is $IsMindboxWorkStation"
@@ -16,3 +18,5 @@ New-Alias $([char]4) Exit-CurrentSession
 
 Import-Module posh-git
 $GitPromptSettings.PathStatusSeparator = [string]::Empty
+
+$global:LASTEXITCODE = $LastExitCodeBackup
