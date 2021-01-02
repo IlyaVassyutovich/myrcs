@@ -2,7 +2,7 @@ $_mr = $env:mr
 
 if ($_mr)
 {
-	$mindbox = @{
+	$global:mindbox = @{
 		root      = $_mr;
 		product   = Join-Path $_mr "DirectCrm";
 		frontend  = Join-Path $_mr "frontend";
@@ -11,14 +11,6 @@ if ($_mr)
 		wpg       = Join-Path $_mr "WebPushGate";
 		ph        = Join-Path $_mr "PushHub";
 	}
-}
-
-Write-Debug "Checking IDE-flag"
-$IsRunningInIde = ${ENV:mindbox/isIntDevEnv}
-Write-Debug "Mindbox Work station flag is $IsRunningInIde"
-if ($IsRunningInIde -ne $True) {
-	Write-Debug "Settings startup location"
-	Set-Location (Join-Path $ENV:mono "Documents")
 }
 
 
