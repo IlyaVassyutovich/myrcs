@@ -1,10 +1,28 @@
-Write-Debug "Checking Mindbox work station flag"
+$DebugPreference = "SilentlyContinue"
+
+$LastExitCodeBackup = $LASTEXITCODE
+
+Write-Debug "Setup Mindbox env | check env"
 $IsMindboxWorkStation = ${ENV:mindbox/isMindboxWorkStation}
-Write-Debug "Mindbox Work station flag is $IsMindboxWorkStation"
+Write-Debug "Setup Mindbox env | $IsMindboxWorkStation"
 if ($IsMindboxWorkStation -eq $True) {
-	Write-Debug "Evaluating Mindbox-specific settings"
-	. (Join-Path $PSScriptRoot mindbox.ps1)
+	Write-Debug "Setup Mindbox env | setting up"
+	# TODO: Implement moduke installation/checking
+	$RequiredVersion = "0.1.1"
+	$ev = $null
+	Import-Module myrcs-mindbox `
+		-RequiredVersion $RequiredVersion `
+		-ErrorVariable ev `
+		-ErrorAction "SilentlyContinue"
+	if (-not $ev) {
+		Write-Debug "Setup Mindbox env | module loaded ($RequiredVersion)"
+	}
+	else {
+		Write-Error "Setup Mindbox env | module loading failed"
+		Write-Error "$ev"
+	}
 }
+Write-Debug "Setup Mindbox env | done"
 
 . (Join-Path $PSScriptRoot chocolatey-profile.ps1)
 . (Join-Path $PSScriptRoot helpers.ps1)
@@ -16,3 +34,5 @@ New-Alias $([char]4) Exit-CurrentSession
 
 Import-Module posh-git
 $GitPromptSettings.PathStatusSeparator = [string]::Empty
+
+$global:LASTEXITCODE = $LastExitCodeBackup
