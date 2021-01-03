@@ -7,11 +7,11 @@ Host agamemnon a7m
 Host hades
 	HostName hades.ivh
 	Port 22
-	User monomah
+	User ilya.vassyutovich
 	ForwardAgent yes
 
 Host thanatos t6s
 	HostName thanatos.ivh
 	Port 22
-	User monomah
+	User ilya.vassyutovich
 	ForwardAgent yes
