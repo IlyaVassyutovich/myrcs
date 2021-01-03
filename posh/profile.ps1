@@ -1,4 +1,4 @@
-$DebugPreference = "SilentlyContinue"
+$DebugPreference = "Continue"
 
 $LastExitCodeBackup = $LASTEXITCODE
 
@@ -28,6 +28,11 @@ Write-Debug "Setup Mindbox env | done"
 . (Join-Path $PSScriptRoot helpers.ps1)
 . (Join-Path $PSScriptRoot prompt.ps1)
 . (Join-Path $PSScriptRoot k8s-helpers.ps1)
+
+Initialize-Module `
+	-Name "pwsh-start-process" `
+	-RequiredVersion "0.1.0" -Prerelease $true `
+	-Repository "agamemnon"
 
 function Exit-CurrentSession { exit }
 New-Alias $([char]4) Exit-CurrentSession
