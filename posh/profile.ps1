@@ -31,7 +31,7 @@ Write-Debug "Setup Mindbox env | done"
 
 Initialize-Module `
 	-Name "pwsh-start-process" `
-	-RequiredVersion "0.0.2" -Prerelease $true `
+	-RequiredVersion "0.1.0" -Prerelease $true `
 	-Repository "agamemnon"
 
 function Exit-CurrentSession { exit }
