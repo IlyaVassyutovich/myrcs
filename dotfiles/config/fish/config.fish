@@ -9,6 +9,8 @@ if not set -q abbrs_initialized
     abbr svim "sudo -E vim"
     abbr megacli "sudo MegaCli64"
     abbr siotop "sudo iotop --only --processes"
+
+    abbr dc "docker-compose"
 end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
