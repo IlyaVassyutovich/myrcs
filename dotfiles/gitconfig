@@ -1,5 +1,3 @@
-[include]
-	path = .gitconfig_user
 [user]
 	name = Ilya Vassyutovich
 	signingkey = B3986DFC895D503C395A704D39FD100DF9D03E17
@@ -48,3 +46,5 @@
 	prune = false
 [rebase]
 	autoStash = false
+[include]
+	path = ~/.gitconfig_user
