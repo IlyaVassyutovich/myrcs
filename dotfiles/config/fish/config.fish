@@ -9,6 +9,7 @@ if not set -q abbrs_initialized
     abbr svim "sudo -E vim"
     abbr megacli "sudo MegaCli64"
     abbr siotop "sudo iotop --only --processes"
+    abbr siftop "sudo iftop -n -N -B"
 
     abbr d "docker"
     abbr dc "docker-compose"
