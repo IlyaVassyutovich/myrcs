@@ -10,6 +10,7 @@ if not set -q abbrs_initialized
     abbr megacli "sudo MegaCli64"
     abbr siotop "sudo iotop --only --processes"
 
+    abbr d "docker"
     abbr dc "docker-compose"
 end
 
