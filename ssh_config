@@ -15,3 +15,21 @@ Host thanatos t6s
 	Port 22
 	User ilya.vassyutovich
 	ForwardAgent yes
+
+Host docker
+	HostName docker.ivh
+	Port 22
+	User root
+	ForwardAgent yes
+
+Host vpn
+	HostName vpn.ivh
+	Port 22
+	User root
+	ForwardAgent yes
+
+Host tor
+	HostName tor.ivh
+	Port 22
+	User root
+	ForwardAgent yes
