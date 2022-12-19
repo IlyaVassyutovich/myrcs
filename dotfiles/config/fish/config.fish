@@ -12,7 +12,7 @@ if not set -q abbrs_initialized
     abbr siftop "sudo iftop -n -N -B"
 
     abbr d "docker"
-    abbr dc "docker-compose"
+    abbr dc "docker compose"
 end
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
