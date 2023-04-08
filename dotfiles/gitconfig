@@ -7,7 +7,6 @@
 [diff]
 	guitool = kdiff3
 [core]
-	editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
 	excludesfile = ~/.gitignore_global
 	pager = less -+$LESS -RSX
 [alias]
@@ -29,17 +28,8 @@
 	ui = true
 [push]
 	default = simple
-[mergetool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-	trustExitCode = false
-[difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-	trustExitCode = false
 [commit]
-	gpgsign = true
 	cleanup = scissors
-[gpg]
-	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
 [pull]
 	rebase = false
 [fetch]
