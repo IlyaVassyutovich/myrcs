@@ -21,9 +21,16 @@
 	force-push = push --force-with-lease
 	pull-master = fetch origin master:master
 	fp = push --force-with-lease
+	push-new-branch = push --set-upstream origin HEAD
+	pnb = push --set-upstream origin HEAD
 	pm = fetch origin master:master
+	pn = fetch origin main:main
 	rema = rebase master
 	reima = rebase -i master
+	rei = rebase -i
+	rec = rebase --continue
+	cb = branch --show-current
+	fa = fetch --all
 [color]
 	ui = true
 [push]
