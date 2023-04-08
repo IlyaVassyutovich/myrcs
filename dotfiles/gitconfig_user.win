@@ -1,0 +1,16 @@
+[user]
+	email = SET_THIS@example.com
+[core]
+	editor = code --wait --new-window --disable-extensions
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+[gpg]
+	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+[commit]
+	gpgsign = true
