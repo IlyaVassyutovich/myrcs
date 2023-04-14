@@ -44,4 +44,5 @@
 [rebase]
 	autoStash = false
 [include]
-	path = ~/.gitconfig_user
+	path = ~/.gitconfig_user_static
+	path = ~/.gitconfig_user_dynamic
