@@ -4,6 +4,13 @@ abbr sc "systemctl"
 abbr scr "screen -D -R"
 abbr tmux "tmux new-session -A -D -s 🤘"
 
+abbr v "virsh"
+abbr vs "virsh start"
+abbr vc "virsh console"
+abbr vsa "virsh_start_attach"
+abbr vl "virsh list"
+abbr vla "virsh list --all"
+
 abbr svirsh "sudo virsh"
 abbr svs "sudo virsh start"
 abbr svc "sudo virsh console"
