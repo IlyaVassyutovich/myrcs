@@ -35,3 +35,7 @@ set --export LESS R
 
 
 set fish_greeting
+
+
+fzf --fish | source
+zoxide init fish | source
