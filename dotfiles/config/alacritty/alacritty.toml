@@ -1,0 +1,12 @@
+[shell]
+	program = "/usr/bin/fish"
+
+[window]
+	decorations = "Full"
+
+[debug]
+	log_level = "Debug"
+
+[font.normal]
+	family = "terminal-font"
+
