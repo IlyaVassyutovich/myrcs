@@ -26,6 +26,8 @@ abbr siftop "sudo iftop -n -N -B"
 abbr d "docker"
 abbr dc "docker compose"
 
+abbr g "git"
+
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
 set --export GPG_TTY (tty)
