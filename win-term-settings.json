@@ -82,7 +82,7 @@
                 "hidden": false,
                 "name": "nu",
                 "source": "nu",
-                "startingDirectory": "%ME__DOCS%"
+                "startingDirectory": "%ME__NUSHELL__STARTING_DIR%"
             }
         ]
     },
