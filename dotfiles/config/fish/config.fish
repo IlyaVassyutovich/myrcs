@@ -26,6 +26,13 @@ abbr siftop "sudo iftop -n -N -B"
 abbr d "docker"
 abbr dc "docker compose"
 
+abbr co "compozd"
+abbr cod "compozd down"
+abbr cou "compozd up"
+abbr col "compozd logs"
+abbr coul "compozd uplog"
+abbr coua "compozd uptach"
+
 abbr g "git"
 
 
