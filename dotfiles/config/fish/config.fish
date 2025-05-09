@@ -2,7 +2,7 @@ abbr sfish "sudo -i /usr/bin/fish"
 abbr ssc "sudo systemctl"
 abbr sc "systemctl"
 abbr scr "screen -D -R"
-abbr tmux "tmux new-session -A -D -s 🤘"
+abbr tmux "tmux new-session -A -D -s main"
 
 abbr v "virsh"
 abbr vs "virsh start"
