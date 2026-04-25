@@ -40,6 +40,9 @@ abbr coua "compozd uptach"
 
 abbr g "git"
 
+abbr p "podman"
+abbr pc "podman compose"
+
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
 set --export GPG_TTY (tty)
