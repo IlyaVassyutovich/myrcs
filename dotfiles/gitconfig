@@ -1,5 +1,6 @@
 [user]
 	name = Ilya Vassyutovich
+	email = me@iv.link
 	signingkey = B3986DFC895D503C395A704D39FD100DF9D03E17
 [merge]
 	tool = kdiff3
@@ -49,4 +50,3 @@
 	autoStash = false
 [include]
 	path = ~/.gitconfig_user_static
-	path = ~/.gitconfig_user_dynamic
