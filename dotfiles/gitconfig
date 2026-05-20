@@ -42,6 +42,7 @@
 	default = simple
 [commit]
 	cleanup = scissors
+	gpgsign = true
 [pull]
 	rebase = false
 [fetch]
