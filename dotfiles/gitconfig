@@ -16,7 +16,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = less -+$LESS -RSX
 	symlinks = true
-	# editor = code --wait --new-window --disable-extensions
+	editor = nvim
 [alias]
 	st = status
 	ci = commit
@@ -58,5 +58,6 @@
 	autoStash = false
 	autosquash = true
 [include]
-	path = ~/.gitconfig_user_static
 	path = ~/.gitconfig_override_gpg
+	path = ~/.gitconfig_override_kdiff
+	path = ~/.gitconfig_override_editor
