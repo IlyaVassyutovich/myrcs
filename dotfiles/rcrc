@@ -1,3 +1,1 @@
-EXCLUDES="!* *~"
-
 test -f ~/.rcrc.tags && . ~/.rcrc.tags
