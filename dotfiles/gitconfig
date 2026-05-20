@@ -10,6 +10,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = less -+$LESS -RSX
+	symlinks = true
 [alias]
 	st = status
 	ci = commit
