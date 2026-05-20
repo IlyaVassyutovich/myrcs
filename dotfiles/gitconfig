@@ -49,5 +49,6 @@
 	prune = false
 [rebase]
 	autoStash = false
+	autosquash = true
 [include]
 	path = ~/.gitconfig_user_static
