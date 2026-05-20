@@ -8,5 +8,3 @@
 	path = C:/Program Files/KDiff3/kdiff3.exe
 	trustExitCode = false
 	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
-[gpg]
-	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe

@@ -54,3 +54,4 @@
 	autosquash = true
 [include]
 	path = ~/.gitconfig_user_static
+	path = ~/.gitconfig_override_gpg
