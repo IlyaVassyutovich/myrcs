@@ -6,8 +6,12 @@
 	tool = kdiff3
 	conflictstyle = diff3
 	guitool = kdiff3
+[mergetool "kdiff3"]
+	trustExitCode = false
 [diff]
 	guitool = kdiff3
+[difftool "kdiff3"]
+	trustExitCode = false
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = less -+$LESS -RSX

@@ -2,9 +2,7 @@
 	editor = code --wait --new-window --disable-extensions
 [mergetool "kdiff3"]
 	path = C:/Program Files/KDiff3/kdiff3.exe
-	trustExitCode = false
 	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 [difftool "kdiff3"]
 	path = C:/Program Files/KDiff3/kdiff3.exe
-	trustExitCode = false
 	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
