@@ -42,7 +42,9 @@ abbr g "git"
 
 abbr p "podman"
 abbr pc "podman compose"
-
+abbr pcu "podman compose up --detach"
+abbr pcd "podman compose down"
+abbr pca "podman compose up"
 
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
 set --export GPG_TTY (tty)
