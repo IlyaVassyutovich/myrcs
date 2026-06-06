@@ -46,6 +46,8 @@ abbr pcu "podman compose up --detach"
 abbr pcd "podman compose down"
 abbr pca "podman compose up"
 
+set --global fish_prompt_pwd_dir_length 69
+
 # https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309848851
 set --export GPG_TTY (tty)
 
