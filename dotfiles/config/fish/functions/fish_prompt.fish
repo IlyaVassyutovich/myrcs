@@ -1,1 +1,1 @@
-/usr/share/fish/tools/web_config/sample_prompts/nim.fish
+/usr/share/fish/prompts/nim.fish
