@@ -1,1 +1,1 @@
-/usr/share/fish/prompts/nim.fish
+prompt_nim_4.8.1.fish
